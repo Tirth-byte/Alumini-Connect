@@ -1,0 +1,97 @@
+{
+  "name": "Alumni",
+  "type": "object",
+  "properties": {
+    "first_name": {
+      "type": "string",
+      "description": "Alumni first name"
+    },
+    "last_name": {
+      "type": "string",
+      "description": "Alumni last name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Alumni email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Alumni phone number"
+    },
+    "graduation_year": {
+      "type": "integer",
+      "description": "Year of graduation"
+    },
+    "degree": {
+      "type": "string",
+      "description": "Degree earned"
+    },
+    "major": {
+      "type": "string",
+      "description": "Field of study/major"
+    },
+    "current_company": {
+      "type": "string",
+      "description": "Current employer"
+    },
+    "current_position": {
+      "type": "string",
+      "description": "Current job title"
+    },
+    "industry": {
+      "type": "string",
+      "enum": [
+        "Technology",
+        "Healthcare",
+        "Finance",
+        "Education",
+        "Government",
+        "Non-Profit",
+        "Consulting",
+        "Manufacturing",
+        "Real Estate",
+        "Legal",
+        "Media",
+        "Retail",
+        "Other"
+      ],
+      "description": "Current industry"
+    },
+    "location": {
+      "type": "string",
+      "description": "Current city and state/country"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Professional biography"
+    },
+    "linkedin_url": {
+      "type": "string",
+      "description": "LinkedIn profile URL"
+    },
+    "profile_photo_url": {
+      "type": "string",
+      "description": "Profile photo URL"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether alumni profile is active"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Interest tags and specialties"
+    }
+  },
+  "required": [
+    "first_name",
+    "last_name",
+    "email",
+    "graduation_year",
+    "degree"
+  ]
+}

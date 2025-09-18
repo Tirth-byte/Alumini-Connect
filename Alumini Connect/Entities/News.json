@@ -1,0 +1,72 @@
+{
+  "name": "News",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "News article title"
+    },
+    "content": {
+      "type": "string",
+      "description": "News article content"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Brief summary of the article"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Alumni Achievement",
+        "Campus News",
+        "Event Recap",
+        "Career Spotlight",
+        "University Update",
+        "Research",
+        "Other"
+      ],
+      "description": "News category"
+    },
+    "author": {
+      "type": "string",
+      "description": "Article author"
+    },
+    "publish_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Publication date"
+    },
+    "featured_image_url": {
+      "type": "string",
+      "description": "Featured image URL"
+    },
+    "is_published": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether article is published"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether article is featured"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Article tags"
+    },
+    "external_url": {
+      "type": "string",
+      "description": "External link if article is hosted elsewhere"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "category",
+    "author",
+    "publish_date"
+  ]
+}
